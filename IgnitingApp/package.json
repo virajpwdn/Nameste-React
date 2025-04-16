@@ -1,0 +1,30 @@
+{
+  "name": "nameste-react",
+  "version": "1.0.0",
+  "description": "Learning React to understand it deeply",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/virajpwdn/Nameste-React.git)"
+  },
+  "keywords": [
+    "react",
+    "jest",
+    "npm",
+    "project"
+  ],
+  "author": "VP",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
+}
