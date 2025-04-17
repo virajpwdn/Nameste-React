@@ -2,7 +2,10 @@
   "name": "nameste-react",
   "version": "1.0.0",
   "description": "Learning React to understand it deeply",
+  "type": "module",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
