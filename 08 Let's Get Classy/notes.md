@@ -24,3 +24,42 @@ so In class based component there is, constructor, render, componentDidMount thi
 - React first Renders the component -> Then make an API call -> This is also known as config driven UI
 
 ComponentDidMount and useEffect are both same.
+
+
+
+#Very Important Concept -> React LifeCycle Method
+##There are 2 phases In React LifeCycle Method
+1. Render Phase
+2. Commit Phase
+
+1. Render Phase Starts
+- Component is Mounted
+- Constructor is Called
+- Rendering of Component Happens
+2. Commit Phase starts
+- React Updates the DOM (DOM Manupalation Happens over here)
+- ComponentDidMount Method is called
+
+This process happens in batches, for optimizations, for example there is a parent component and there are multiple child component, okay so now how react will render them is as follows,
+
+1. First Parent component is Mounted 
+2. Parent Constructor is called
+   
+3. child 1 is Mounted
+4. child 1 constructor is called
+5. child 2 is mounted
+6. child 2 constructor is called
+7. 
+8. child 1 componentDidMount is called
+9. child 2 componentDidMount is called
+
+Parent componentDidMount is called
+
+
+So here react batched the process if you see in first batch all the components are rendered and in second batch all the components are updated.
+
+
+In render phase reconcialiation takes place where a virtual DOM is created which is simply a javascript object, then in the commit phase this virtual dom is created to real dom and then we see changes on UI.
+
+
+#Now Very Important, when api call is made in componentDidMount when api return data. Then when we update the data with setState then again rendering happens but this time constructor is not called but we update the values with setState and then there is another method that is componentDidUpdate
